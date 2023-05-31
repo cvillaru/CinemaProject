@@ -14,3 +14,11 @@ class Film(models.Model):
 class Screen(models.Model):
     screen_number = models.PositiveIntegerField(default=0)
     capacity = models.SmallIntegerField(default=0)
+    
+class Showing(models.Models):
+    screen = models.ForeignKey(Screen, on_delete=models.PROTECT,related_name="showing")
+    film = models.ForeignKey(Film, on_delete=models.PROTECT, related_name="showing")
+    showing_date = models.DateField(auto_now_add=False, null=True)
+    showing_time = models.TimeField(auto_now_add=False)
+    tickets_sold = models.SmallIntegerField(default=0)
+    
