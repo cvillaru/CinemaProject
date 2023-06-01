@@ -10,3 +10,7 @@ class FilmViewSet(ModelViewSet):
 class ScreenViewSet(ModelViewSet):
     queryset = Screen.objects.all()
     serializer_class = ScreenSerializer
+    
+class ShowingViewSet(ModelViewSet):
+    queryset = Showing.objects.all()
+    serializer_class = ShowingSerializer

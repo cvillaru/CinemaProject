@@ -8,6 +8,7 @@ router = routers.DefaultRouter()
 
 router.register('films', views.FilmViewSet)
 router.register('screens', views.ScreenViewSet)
+router.register('showings', views.ShowingViewSet)
 
 
 urlpatterns = [
