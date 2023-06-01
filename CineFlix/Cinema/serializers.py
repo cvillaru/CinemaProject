@@ -7,7 +7,7 @@ class FilmSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Film
-        fields = ["id","url","title","description"]
+        fields = ["id","url","title","description","age_rating","duration","image","is_active"]
         
         
 class ScreenSerializer(serializers.ModelSerializer):

@@ -5,6 +5,7 @@ class Film(models.Model):
     description = models.TextField(max_length=200)
     age_rating = models.CharField(max_length=5,default="...")
     duration = models.DecimalField(default=0,max_digits=5, decimal_places=2)
+    image = models.ImageField(upload_to='film_images/', blank=True,null=True)
     is_active = models.BooleanField(default=True)
     
     def __str__(self) -> str:
